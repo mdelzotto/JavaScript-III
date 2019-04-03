@@ -13,13 +13,41 @@
 
 // code example for Window Binding
 
+const michael = {
+  'name': 'michael',
+  'browser': this.browser,
+}
+michael["browser"] = "Chrome";
+
+michael.browser;
+
 // Principle 2
 
 // code example for Implicit Binding
 
+const me = {
+  name: 'Michael',
+  class: 'FSW19',
+  sayName: function() {
+    console.log(this.name);
+  }
+}
+
+me.sayName();
+
 // Principle 3
 
 // code example for New Binding
+
+const Attraction = function(name, location) {
+  this.name = name;
+  this.location = location;
+}
+
+let skywalk = new Attraction('Glass Bridge', 'Grand Canyon');
+
+skywalk.name;
+skywalk.location;
 
 // Principle 4
 
