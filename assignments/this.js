@@ -52,3 +52,27 @@ skywalk.location;
 // Principle 4
 
 // code example for Explicit Binding
+
+const sayName = function() {
+  console.log('My name is ' + this.name);
+};
+const sayName2 = function(...languages) {
+  console.log('My name is ' + this.name + ' with skills in ' + languages);
+};
+
+const Michael = {
+	'name': 'Michael',
+  'class': 'FSW19',
+}
+
+const languages = ['html', 'css', 'JS'];
+
+// Call
+sayName.call(Michael);
+
+// Apply
+sayName2.apply(Michael, languages);
+
+// Bind
+const newFn = sayName.bind(Michael);
+newFn();
